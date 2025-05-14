@@ -60,8 +60,8 @@ function App() {
     console.log('All environment variables:', process.env);
     console.log('REACT_APP_API_URL:', process.env.REACT_APP_API_URL);
     
-    // Force the correct URL
-    const API_URL = 'https://srv-d0i1uga4d50c73b0ub8g.onrender.com';
+    // Use the correct Render service URL
+    const API_URL = 'https://sussannahai-1.onrender.com';
     console.log('Using API URL:', API_URL);
     console.log('Request data:', analysisForm);
     
