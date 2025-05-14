@@ -56,12 +56,13 @@ function App() {
 
   function getData(e) {
     e.preventDefault();
-    console.log('Sending request to:', process.env.REACT_APP_API_URL);
+    const API_URL = process.env.REACT_APP_API_URL || 'https://sussannahai-1.onrender.com';
+    console.log('Sending request to:', API_URL);
     console.log('Request data:', analysisForm);
     
     axios({
       method: "post",
-      url: `${process.env.REACT_APP_API_URL}/spam`,
+      url: `${API_URL}/spam`,
       data: JSON.stringify(analysisForm),
       headers: { "Content-Type": "application/json" },
     })
