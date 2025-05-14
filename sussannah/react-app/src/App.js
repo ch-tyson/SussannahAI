@@ -58,7 +58,7 @@ function App() {
     e.preventDefault();
     axios({
       method: "post",
-      url: `${process.env.REACT_APP_API_URL || 'http://localhost:5000'}/spam`,
+      url: `${process.env.REACT_APP_API_URL || 'https://your-app-name.onrender.com'}/spam`,
       data: JSON.stringify(analysisForm),
       headers: { "Content-Type": "application/json" },
     })
