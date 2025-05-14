@@ -1,0 +1,40 @@
+{"text": "Get rich quick with this simple trick", "label": "spam"}
+{"text": "You're the lucky winner of our lottery", "label": "spam"}
+{"text": "Click here to claim your free vacation", "label": "spam"}
+{"text": "Earn $5000 a day from home", "label": "spam"}
+{"text": "Please review the attached invoice", "label": "not_spam"}
+{"text": "Looking forward to our lunch meeting", "label": "not_spam"}
+{"text": "Can you review my code?", "label": "not_spam"}
+{"text": "Let's catch up over coffee", "label": "not_spam"}
+{"text": "URGENT: Your account needs verification", "label": "spam"}
+{"text": "Congratulations! You've won an iPhone", "label": "spam"}
+{"text": "Make money fast with no investment", "label": "spam"}
+{"text": "Your package has been delivered", "label": "not_spam"}
+{"text": "Meeting agenda for tomorrow", "label": "not_spam"}
+{"text": "Project update: Q2 results", "label": "not_spam"}
+{"text": "Your password needs to be reset", "label": "spam"}
+{"text": "Claim your inheritance now", "label": "spam"}
+{"text": "Your bank account is locked", "label": "spam"}
+{"text": "Please confirm your email address", "label": "not_spam"}
+{"text": "Team meeting at 2 PM", "label": "not_spam"}
+{"text": "New feature deployment tomorrow", "label": "not_spam"}
+{"text": "You've been selected for a free gift", "label": "spam"}
+{"text": "Your subscription is expiring", "label": "spam"}
+{"text": "Double your money in 24 hours", "label": "spam"}
+{"text": "Please review the latest changes", "label": "not_spam"}
+{"text": "Client presentation feedback", "label": "not_spam"}
+{"text": "Your account has been compromised", "label": "spam"}
+{"text": "You've won a luxury cruise", "label": "spam"}
+{"text": "Make $10,000 in your first week", "label": "spam"}
+{"text": "Project deadline reminder", "label": "not_spam"}
+{"text": "Weekly team sync meeting", "label": "not_spam"}
+{"text": "Your payment is overdue", "label": "spam"}
+{"text": "Claim your prize now", "label": "spam"}
+{"text": "Your account needs attention", "label": "spam"}
+{"text": "Code review request", "label": "not_spam"}
+{"text": "New client onboarding", "label": "not_spam"}
+{"text": "Your account will be suspended", "label": "spam"}
+{"text": "You've been chosen for a special offer", "label": "spam"}
+{"text": "Make money while you sleep", "label": "spam"}
+{"text": "Documentation update needed", "label": "not_spam"}
+{"text": "Team building event next week", "label": "not_spam"} 

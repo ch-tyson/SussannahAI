@@ -1,0 +1,43 @@
+{"text": "I love this product", "label": "positive"}
+{"text": "This is the best day of my life", "label": "positive"}
+{"text": "I'm not happy with the service", "label": "negative"}
+{"text": "I hate waiting in line", "label": "negative"}
+{"text": "It's an average day", "label": "neutral"}
+{"text": "I don't feel strongly about this", "label": "neutral"}
+{"text": "I'm really looking forward to the weekend", "label": "positive"}
+{"text": "I can't wait to use this new app", "label": "positive"}
+{"text": "I'm so grateful for your help", "label": "positive"}
+{"text": "I'm feeling really down today", "label": "negative"}
+{"text": "I'm not happy with the product quality", "label": "negative"}
+{"text": "I'm disappointed with the service", "label": "negative"}
+{"text": "I regret buying this product", "label": "negative"}
+{"text": "I don't have any strong feelings about this", "label": "neutral"}
+{"text": "It's an average movie", "label": "neutral"}
+{"text": "The product does its job", "label": "neutral"}
+{"text": "It's not bad, but it's not great either", "label": "neutral"}
+{"text": "You're an idiot", "label": "negative"}
+{"text": "I hate you", "label": "negative"}
+{"text": "You are stupid", "label": "negative"}
+{"text": "I will never forgive you", "label": "negative"}
+{"text": "What a loser", "label": "negative"}
+{"text": "I am feeling great today!", "label": "positive"}
+{"text": "I just got a promotion!", "label": "positive"}
+{"text": "I love spending time with my family", "label": "positive"}
+{"text": "I am so excited for tomorrow", "label": "positive"}
+{"text": "I am feeling content", "label": "positive"}
+{"text": "I had a wonderful time at the park", "label": "positive"}
+{"text": "I am looking forward to my vacation", "label": "positive"}
+{"text": "This meal was delicious", "label": "positive"}
+{"text": "I am so proud of my accomplishments", "label": "positive"}
+{"text": "The weather is mild", "label": "neutral"}
+{"text": "I ran for an hour", "label": "neutral"}
+{"text": "The movie was average", "label": "neutral"}
+{"text": "The store was closed", "label": "neutral"}
+{"text": "I took the bus home", "label": "neutral"}
+{"text": "The food was okay", "label": "neutral"}
+{"text": "It was an average day", "label": "neutral"}
+{"text": "The meeting lasted thirty minutes", "label": "neutral"}
+{"text": "I bought groceries from the store", "label": "neutral"}
+{"text": "The train arrived on time", "label": "neutral"}
+{"text": "The book has 300 pages", "label": "neutral"}
+{"text": "The room temperature is 72 degrees", "label": "neutral"} 
