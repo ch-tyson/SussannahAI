@@ -8,19 +8,23 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+
+# More permissive CORS for debugging
 CORS(app, resources={
     r"/*": {
-        "origins": [
-            "https://sussannah-ai.vercel.app",
-            "http://localhost:3000"
-        ],
+        "origins": "*",  # Allow all origins during debugging
         "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type"]
+        "allow_headers": ["Content-Type", "Accept"],
+        "expose_headers": ["Content-Type"],
+        "supports_credentials": True
     }
 })
 
-@app.route('/spam', methods=['POST'])
+@app.route('/spam', methods=['POST', 'OPTIONS'])
 def analyze_text():
+    if request.method == 'OPTIONS':
+        return '', 200
+        
     try:
         logger.info("Received request to /spam endpoint")
         data = request.get_json()
