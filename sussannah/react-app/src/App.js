@@ -56,7 +56,7 @@ function App() {
 
   function getData(e) {
     e.preventDefault();
-    const API_URL = process.env.REACT_APP_API_URL || 'https://sussannahai-1.onrender.com';
+    const API_URL = process.env.REACT_APP_API_URL || 'https://srv-d0i1uga4d50c73b0ub8g.onrender.com';
     console.log('Sending request to:', API_URL);
     console.log('Request data:', analysisForm);
     
