@@ -56,15 +56,18 @@ function App() {
 
   function getData(e) {
     e.preventDefault();
+    console.log('Sending request to:', process.env.REACT_APP_API_URL);
+    console.log('Request data:', analysisForm);
+    
     axios({
       method: "post",
-      url: `${process.env.REACT_APP_API_URL || 'https://your-app-name.onrender.com'}/spam`,
+      url: `${process.env.REACT_APP_API_URL}/spam`,
       data: JSON.stringify(analysisForm),
       headers: { "Content-Type": "application/json" },
     })
       .then((response) => {
+        console.log('Response received:', response.data);
         const res = response.data;
-        console.log(res);
         setResultData({
           paragraph: res.summary ? res.summary : null,
           options: [
@@ -103,11 +106,19 @@ function App() {
         else setSpamData(null);
       })
       .catch((error) => {
-        if (error.response) {
-          console.log(error.response);
-          console.log(error.response.status);
-          console.log(error.response.headers);
-        }
+        console.error('Error details:', {
+          message: error.message,
+          response: error.response?.data,
+          status: error.response?.status,
+          headers: error.response?.headers
+        });
+        
+        // Show error to user
+        setResultData({
+          paragraph: "Error: Could not analyze text. Please try again.",
+          options: [null, null],
+          sentimentValue: null
+        });
       });
   }
   //end of new line
