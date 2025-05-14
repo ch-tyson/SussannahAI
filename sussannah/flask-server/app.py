@@ -9,21 +9,26 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
-# More permissive CORS for debugging
-CORS(app, resources={
-    r"/*": {
-        "origins": "*",  # Allow all origins during debugging
-        "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Accept"],
-        "expose_headers": ["Content-Type"],
-        "supports_credentials": True
-    }
-})
+# Configure CORS
+CORS(app, 
+     resources={r"/*": {
+         "origins": ["https://sussannah-ai.vercel.app", "http://localhost:3000"],
+         "methods": ["GET", "POST", "OPTIONS"],
+         "allow_headers": ["Content-Type", "Accept"],
+         "expose_headers": ["Content-Type"],
+         "supports_credentials": True,
+         "max_age": 3600
+     }},
+     supports_credentials=True)
 
 @app.route('/spam', methods=['POST', 'OPTIONS'])
 def analyze_text():
     if request.method == 'OPTIONS':
-        return '', 200
+        response = app.make_default_options_response()
+        response.headers.add('Access-Control-Allow-Origin', 'https://sussannah-ai.vercel.app')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Accept')
+        response.headers.add('Access-Control-Allow-Methods', 'POST,OPTIONS')
+        return response
         
     try:
         logger.info("Received request to /spam endpoint")

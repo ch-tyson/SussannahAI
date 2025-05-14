@@ -13,6 +13,12 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+
+// Configure axios defaults
+axios.defaults.baseURL = 'https://sussannahai-1.onrender.com';
+axios.defaults.headers.common['Content-Type'] = 'application/json';
+axios.defaults.headers.common['Accept'] = 'application/json';
+
 Chart.register(
   ArcElement,
   CategoryScale,
@@ -56,24 +62,10 @@ function App() {
 
   function getData(e) {
     e.preventDefault();
-    // Debug environment variables
-    console.log('All environment variables:', process.env);
-    console.log('REACT_APP_API_URL:', process.env.REACT_APP_API_URL);
-    
-    // Use the correct Render service URL
-    const API_URL = 'https://sussannahai-1.onrender.com';
-    console.log('Using API URL:', API_URL);
+    console.log('Sending request to:', axios.defaults.baseURL);
     console.log('Request data:', analysisForm);
     
-    axios({
-      method: "post",
-      url: `${API_URL}/spam`,
-      data: JSON.stringify(analysisForm),
-      headers: { 
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-    })
+    axios.post('/spam', analysisForm)
       .then((response) => {
         console.log('Response received:', response.data);
         const res = response.data;
@@ -122,7 +114,6 @@ function App() {
           headers: error.response?.headers
         });
         
-        // Show error to user
         setResultData({
           paragraph: "Error: Could not analyze text. Please try again.",
           options: [null, null],
